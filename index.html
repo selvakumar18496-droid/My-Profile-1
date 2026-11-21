@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Selvakumar R — Content Writer & Visual Storyteller</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1030; --blue:#1c3faa; --red:#e5262b; --deep-red:#a3141a; --paper:#f6f1e7; --ink:#10143a; --web:rgba(255,255,255,.14);
+  color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root{--navy:#0a1030}}
+:root[data-theme="dark"]{--navy:#0a1030}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--navy);color:var(--paper);font:400 1.05rem/1.65 'Barlow',system-ui,sans-serif;overflow-x:hidden;
+  background-image:radial-gradient(rgba(229,38,43,.13) 1.2px,transparent 1.4px);background-size:14px 14px}
+h1,h2,h3,.bang{font-family:'Bangers','Impact',sans-serif;font-weight:400;letter-spacing:.04em;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap;padding:.7rem 1rem;background:var(--red);border-bottom:4px solid var(--ink)}
+nav a{font-family:'Bangers',sans-serif;font-size:1.25rem;letter-spacing:.08em;text-decoration:none;color:#fff;text-shadow:2px 2px 0 var(--ink)}
+nav a:hover{color:var(--navy);text-shadow:none}
+/* hero */
+.hero{position:relative;min-height:88vh;display:grid;place-items:center;text-align:center;padding:4rem 1.2rem 5rem;overflow:hidden;
+  background:linear-gradient(160deg,var(--blue) 0%,var(--navy) 62%)}
+.hero svg.webbg{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.thread{position:absolute;top:0;left:12%;width:2px;background:#fff;height:0;animation:drop 1.6s cubic-bezier(.3,1.4,.5,1) .3s forwards}
+.thread::after{content:"";position:absolute;bottom:-14px;left:-9px;width:20px;height:20px;border-radius:50%;background:var(--ink);border:2px solid #fff;box-shadow:0 0 0 0 transparent}
+@keyframes drop{to{height:26vh}}
+.hero-inner{position:relative;max-width:900px}
+.kicker{display:inline-block;background:var(--paper);color:var(--ink);font-family:'Bangers',sans-serif;font-size:1.2rem;letter-spacing:.08em;padding:.2rem .9rem;transform:rotate(-2deg);border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+h1{font-size:clamp(3.6rem,13vw,9rem);color:var(--red);text-shadow:4px 4px 0 var(--paper),8px 8px 0 var(--ink);margin:1.2rem 0 1.4rem;-webkit-text-stroke:2px var(--ink)}
+.hero p.lead{max-width:34rem;margin:0 auto 2rem;font-size:1.2rem}
+.btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{font-family:'Bangers',sans-serif;font-size:1.35rem;letter-spacing:.07em;text-decoration:none;padding:.55rem 1.6rem;border:3px solid var(--ink);background:var(--red);color:#fff;box-shadow:5px 5px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.btn.alt{background:var(--paper);color:var(--ink)}
+.btn:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+/* sections */
+section{max-width:1060px;margin:0 auto;padding:4.5rem 1.2rem 1rem}
+h2{font-size:clamp(2.4rem,6vw,3.6rem);color:var(--paper);text-shadow:3px 3px 0 var(--red);margin-bottom:1.8rem}
+.panel{background:var(--paper);color:var(--ink);border:4px solid var(--ink);box-shadow:8px 8px 0 var(--red);padding:1.6rem 1.8rem;position:relative}
+.panel h3{font-size:1.7rem;color:var(--deep-red)}
+.panel .meta{font-weight:600;color:var(--blue);margin-bottom:.4rem}
+.about{display:grid;grid-template-columns:1.5fr 1fr;gap:2rem;align-items:start}
+.about .panel p+p{margin-top:.9rem}
+.facts{background:var(--blue);color:#fff;border:4px solid var(--ink);box-shadow:8px 8px 0 var(--paper);padding:1.4rem 1.6rem;list-style:none}
+.facts li{padding:.45rem 0;border-bottom:1px dashed rgba(255,255,255,.35)}
+.facts li:last-child{border:0}
+.facts b{font-family:'Bangers',sans-serif;font-weight:400;font-size:1.2rem;letter-spacing:.06em;display:block;color:#ffd4d4}
+.skills{display:flex;flex-wrap:wrap;gap:.9rem}
+.skill{font-family:'Bangers',sans-serif;font-size:1.35rem;letter-spacing:.06em;padding:.4rem 1.2rem;background:var(--paper);color:var(--ink);border:3px solid var(--ink);box-shadow:4px 4px 0 var(--red);transition:transform .15s}
+.skill:nth-child(3n){background:var(--red);color:#fff}
+.skill:nth-child(4n+2){background:var(--blue);color:#fff}
+.skill:hover{transform:rotate(-3deg) scale(1.06)}
+.timeline{display:grid;gap:2rem;position:relative;padding-left:2rem}
+.timeline::before{content:"";position:absolute;left:6px;top:0;bottom:0;width:3px;background:repeating-linear-gradient(var(--paper) 0 10px,transparent 10px 18px)}
+.timeline .panel::before{content:"";position:absolute;left:calc(-2rem - 4px);top:1.7rem;width:16px;height:16px;border-radius:50%;background:var(--red);border:3px solid var(--paper)}
+.panel ul{padding-left:1.2rem;margin-top:.5rem}
+.panel li+li{margin-top:.25rem}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.8rem}
+.edu .panel{box-shadow:8px 8px 0 var(--blue)}
+.big{font-family:'Bangers',sans-serif;font-size:2.4rem;color:var(--red);line-height:1}
+.contact{text-align:center;padding-bottom:5rem}
+.contact .panel{max-width:640px;margin:0 auto}
+.contact .panel p{margin-bottom:1.3rem}
+.contact .btns{margin-top:.4rem}
+.info{margin-top:1.4rem;font-weight:600;word-break:break-word}
+footer{background:var(--red);border-top:4px solid var(--ink);text-align:center;padding:1rem 1rem calc(1rem + env(safe-area-inset-bottom,0px));font-family:'Bangers',sans-serif;letter-spacing:.08em;font-size:1.1rem;text-shadow:2px 2px 0 var(--ink)}
+@media(max-width:720px){.about{grid-template-columns:1fr}.thread{left:6%}.timeline{padding-left:1.6rem}.timeline .panel::before{left:calc(-1.6rem - 4px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.thread{animation:none;height:26vh}.btn,.skill{transition:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+  <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+
+<header class="hero">
+  <svg class="webbg" viewBox="0 0 800 600" preserveAspectRatio="xMaxYMin slice" aria-hidden="true" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.2">
+    <g id="rays">
+      <line x1="800" y1="0" x2="0" y2="0"/><line x1="800" y1="0" x2="0" y2="120"/><line x1="800" y1="0" x2="0" y2="300"/>
+      <line x1="800" y1="0" x2="100" y2="600"/><line x1="800" y1="0" x2="350" y2="600"/><line x1="800" y1="0" x2="600" y2="600"/><line x1="800" y1="0" x2="800" y2="600"/>
+    </g>
+    <path d="M700 0Q690 70 800 100M600 0Q580 140 800 200M500 0Q460 220 800 310M400 0Q340 300 800 430M300 0Q230 380 800 560"/>
+  </svg>
+  <div class="thread" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <span class="kicker">Content Writer · Visual Communicator</span>
+    <h1>Selvakumar R</h1>
+    <p class="lead">I spin stories for the screen and the scroll. Two years writing and managing digital content at Prime Focus Technologies, with television production and photography behind it.</p>
+    <div class="btns"><a class="btn" href="#work">See my work</a><a class="btn alt" href="#contact">Get in touch</a></div>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <h2>Origin story</h2>
+  <div class="about">
+    <div class="panel">
+      <p>I'm a content writer with a B.Sc. in Visual Communication from the University of Madras. I write for digital audiences and I think in visuals, so my copy comes with a sense of how it will look and move.</p>
+      <p>Beyond writing, I've assisted on a Kannada television show, worked as a freelance photographer and visited a professional production studio in Chennai. I learn quickly, adapt to new roles and enjoy solving problems that don't have a template.</p>
+    </div>
+    <ul class="facts">
+      <li><b>Based in</b>Surandai, Tenkasi District, Tamil Nadu</li>
+      <li><b>Languages</b>Tamil, Malayalam, English</li>
+      <li><b>Focus</b>Digital storytelling and media content</li>
+    </ul>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Powers</h2>
+  <div class="skills">
+    <span class="skill">Content Writing</span><span class="skill">Digital Storytelling</span><span class="skill">Media Content Management</span><span class="skill">Creative Design</span><span class="skill">Project Management</span><span class="skill">Problem Solving</span><span class="skill">Decision Making</span><span class="skill">Innovative Thinking</span><span class="skill">Quick Learning</span><span class="skill">Service Focus</span><span class="skill">Drawing</span>
+  </div>
+</section>
+
+<section id="work">
+  <h2>Missions</h2>
+  <div class="timeline">
+    <article class="panel">
+      <h3>Content Writer</h3>
+      <p class="meta">Prime Focus Technologies, Bangalore · May 2023 – May 2025</p>
+      <ul><li>Created and managed digital content and storytelling materials.</li><li>Contributed to content projects and media management activities.</li><li>Applied creative thinking and clear communication to deliver quality work.</li></ul>
+    </article>
+    <article class="panel">
+      <h3>Assistant Director</h3>
+      <p class="meta">Super Jodi, Suvarna TV (Kannada)</p>
+      <ul><li>Assisted with television production, creative coordination, planning and execution of content.</li></ul>
+    </article>
+    <article class="panel">
+      <h3>Freelance Photographer</h3>
+      <p class="meta">Independent</p>
+      <ul><li>Worked independently on photography projects and developed creative visual content.</li></ul>
+    </article>
+    <article class="panel">
+      <h3>Industrial Visit</h3>
+      <p class="meta">Master Frames, T. Nagar, Chennai</p>
+      <ul><li>Gained exposure to a professional media and creative production environment.</li></ul>
+    </article>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Training</h2>
+  <div class="edu">
+    <div class="panel"><div class="big">2016</div><h3>B.Sc. Visual Communication</h3><p class="meta">University of Madras, Chennai</p></div>
+    <div class="panel"><div class="big">2013</div><h3>Higher Secondary (HSC)</h3><p class="meta">Baren Bruck Higher Secondary School, Bungalow Surandai · 60.42%</p></div>
+    <div class="panel"><div class="big">2011</div><h3>SSLC</h3><p class="meta">Baren Bruck Higher Secondary School, Bungalow Surandai · 86%</p></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Send a signal</h2>
+  <div class="panel">
+    <p>Looking for a writer who can turn ideas into engaging digital stories? Let's talk.</p>
+    <div class="btns">
+      <a class="btn" href="mailto:selvakumar18496@gmail.com">Email me</a>
+      <a class="btn alt" href="tel:+919790498032">Call me</a>
+      <a class="btn alt" href="https://linkedin.com/in/selva-kumar-421a3b169" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="info">selvakumar18496@gmail.com<br>+91 97904 98032</p>
+  </div>
+</section>
+</main>
+<footer>© 2026 Selvakumar R</footer>
+</body>
+</html>
